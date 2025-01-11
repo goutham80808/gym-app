@@ -20,8 +20,6 @@ export default function Generator(props) {
     const { muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout } = props
     const [showModal, setShowModal] = useState(false)
 
-    // let showModal = false
-
     function toggleModal() {
         setShowModal(!showModal)
     }
@@ -64,6 +62,7 @@ export default function Generator(props) {
                     )
                 })}
             </div>
+
             <Header index={'02'} title={'Lock on targets'} description={"Select the muscles judged for annihilation."} />
             <div className='bg-slate-950  border border-solid border-blue-400 rounded-lg flex flex-col'>
                 <button onClick={toggleModal} className='relative p-3 flex items-center justify-center'>
@@ -84,6 +83,7 @@ export default function Generator(props) {
                     </div>
                 )}
             </div>
+            
             <Header index={'03'} title={'Become Juggernaut'} description={"Select your ultimate objective."} />
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                 {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
